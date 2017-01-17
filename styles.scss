@@ -1,9 +1,15 @@
-// ++++ reminder to insert Typekit import ++++
+// ++++ TO DO LIST ++++
+// check browsers
+// mobile layout
+// optimize code
+// final proof against task request
+// README update with explanantion
+// email completed task URLs
 
 
 // Variables
 
-$font-stack: "Franklin Gothic Book", sans-serif;
+$font-stack: "franklin-gothic-urw", sans-serif;
 $charcoal: #2B2B2B;
 $light-gray: #D4D4D6;
 $dark-gray: #484848;
@@ -51,7 +57,9 @@ body {
   color: $dark-gray;
   display: flex;
   flex-direction: column;
-  font: 19.5px $font-stack;
+  font-family: $font-stack;
+	font-size: 19.5px;
+	font-weight: 400;
   letter-spacing: .1rem;
 }
 header {
@@ -104,7 +112,7 @@ article {
   }
 	h1 {
 	  font-size: 1.9rem;
-	  line-height: 1;
+	  line-height: 2rem;
 	  text-align: center;
 	}
 	h2 {

@@ -36,9 +36,11 @@ body {
 
 header {
   padding: 1.5em 0; }
+  @media (max-width: 768px) {
+    header {
+      padding: 0; } }
 
-nav ul {
-  align-content: stretch;
+nav {
   align-items: baseline;
   display: flex;
   flex-flow: row wrap;
@@ -47,25 +49,58 @@ nav ul {
   list-style: none;
   margin: auto;
   width: 1164px; }
-nav a {
-  background-color: #FFFFFF;
-  box-shadow: none;
-  color: #484848;
-  display: inline-block;
-  padding: 1.2rem 0;
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow ease .3s;
-  width: 164px; }
-  nav a.active {
-    border-top: 5px solid #484848;
+  @media (max-width: 768px) {
+    nav {
+      height: auto;
+      width: 100%; } }
+  nav a {
+    background-color: #FFFFFF;
     box-shadow: none;
-    background: none; }
-  nav a.join {
-    background-color: #2B2B2B;
-    color: #FFFFFF; }
-  nav a:hover {
-    box-shadow: 5px 5px 0 0 #484848; }
+    color: #484848;
+    display: inline-block;
+    padding: 1.2rem 0;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow ease .3s;
+    width: 164px; }
+    @media (max-width: 768px) {
+      nav a {
+        flex-grow: 1;
+        font-size: .8rem;
+        margin: 0 5px 0 0;
+        padding: .9rem .1rem;
+        width: auto; }
+        nav a:nth-child(5) {
+          margin-right: 0; } }
+    nav a.active {
+      border-top: 5px solid #484848;
+      box-shadow: none;
+      background: none; }
+      @media (max-width: 768px) {
+        nav a.active {
+          visibility: hidden;
+          position: relative;
+          width: 22px; }
+          nav a.active:after {
+            align-self: flex-end;
+            border-top: 5px solid #484848;
+            content: "\2B07";
+            left: 0;
+            padding-top: 37px;
+            position: absolute;
+            top: 0;
+            visibility: visible;
+            width: 100%; } }
+    nav a.join {
+      background-color: #2B2B2B;
+      color: #FFFFFF; }
+      @media (max-width: 768px) {
+        nav a.join {
+          margin-right: 0;
+          order: -1;
+          width: 100%; } }
+    nav a:hover {
+      box-shadow: 5px 5px 0 0 #484848; }
 
 article {
   background-color: #FFFFFF;
@@ -75,6 +110,11 @@ article {
   article p {
     line-height: 1.5rem;
     margin: 1rem; }
+    @media (max-width: 768px) {
+      article p {
+        margin: 1.5rem 1rem;
+        font-size: 1rem;
+        line-height: 1.3rem; } }
   article h1 {
     font-size: 1.9rem;
     line-height: 2rem;
@@ -86,5 +126,10 @@ article {
     article h2 span {
       color: #6e6e6e;
       text-transform: uppercase; }
+  @media (max-width: 768px) {
+    article {
+      width: auto;
+      margin: 5px;
+      padding: 2rem 1rem; } }
 
 /*# sourceMappingURL=styles.css.map */

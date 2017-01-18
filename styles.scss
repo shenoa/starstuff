@@ -1,6 +1,6 @@
 // ++++ TO DO LIST ++++
-// check browsers
 // mobile layout
+// check browsers
 // optimize code
 // final proof against task request
 // README update with explanantion
@@ -64,19 +64,25 @@ body {
 }
 header {
   padding: 1.5em 0;
+	@media (max-width: 768px) {
+		padding: 0;
+	}
 }
 nav {
-  ul {
-    align-content: stretch;
-    align-items: baseline;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    height: 74px;
-    list-style: none;
-    margin: auto;
-    width: 1164px;
-  }
+  align-items: baseline;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  height: 74px;
+  list-style: none;
+  margin: auto;
+  width: 1164px;
+	@media (max-width: 768px) {
+		//flex-flow: column;
+		//justify-content: flex-start;
+		height: auto;
+		width: 100%;
+	}
   a {
     background-color: #FFFFFF;
     box-shadow: none;
@@ -87,14 +93,45 @@ nav {
     text-decoration: none;
     transition: box-shadow ease .3s;
     width: 164px;
+		@media (max-width: 768px) {
+			flex-grow: 1;
+			font-size: .8rem;
+			margin: 0 5px 0 0;
+		  padding: .9rem .1rem;
+			width: auto;
+			&:nth-child(5) {
+				margin-right: 0;
+			}
+		}
     &.active {
       border-top: 5px solid $dark-gray;
       box-shadow: none;
       background: none;
+			@media (max-width: 768px) {
+				visibility: hidden;
+				position: relative;
+				width: 22px;
+				&:after {
+					align-self: flex-end;
+					border-top: 5px solid $dark-gray;
+					content: "\2B07";
+					left: 0;
+				  padding-top: 37px;
+					position: absolute;
+					top: 0;
+					visibility: visible;
+					width: 100%;
+				}
+			}
     }
     &.join {
       background-color: $charcoal;
       color: $contrast-color;
+			@media (max-width: 768px) {
+				margin-right: 0;
+				order: -1;
+				width: 100%;
+			}
     }
     &:hover {
       box-shadow: 5px 5px 0 0 $dark-gray;
@@ -109,6 +146,11 @@ article {
   p {
     line-height: 1.5rem;
     margin: 1rem;
+		@media (max-width: 768px) {
+			margin: 1.5rem 1rem;
+			font-size: 1rem;
+			line-height: 1.3rem;
+		}
   }
 	h1 {
 	  font-size: 1.9rem;
@@ -123,5 +165,10 @@ article {
 	    color: lighten($dark-gray, 15%);
 	    text-transform: uppercase;
 	  }
+	}
+	@media (max-width: 768px) {
+		width: auto;
+		margin: 5px;
+		padding: 2rem 1rem;
 	}
 }

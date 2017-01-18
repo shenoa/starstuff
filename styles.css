@@ -29,9 +29,7 @@ body {
   color: #484848;
   display: flex;
   flex-direction: column;
-  font-family: "franklin-gothic-urw", sans-serif;
-  font-size: 19.5px;
-  font-weight: 400;
+  font: "franklin-gothic-urw", sans-serif 19.5px 400;
   letter-spacing: .1rem; }
 
 header {
